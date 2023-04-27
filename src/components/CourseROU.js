@@ -60,44 +60,115 @@ const CourseROU = () => {
   return (
     <div>
         <HeaderROU/>
-      <div className="course-container container font-link">
-        <div className="course-box bg-light">
-        <h4>Courses</h4>
-        <p>
-            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-             Robotic Process Automation</button>
-        </p>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-            <div className="row g-4 mb-3">
-            <div className="col-md-2">
-              <h6>No. of Batches</h6>
-              <select className="form-select" id="num-batches" value={numBatches} onChange={handleNumBatchesChange}>
-                <option value="0" selected>Select</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-                <option value="None">No Batch</option>
-              </select>
+        <div className="course-container container font-link">
+          <div className="course-box bg-light">
+            <h4>Enter Courses Details</h4>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Robotic Process Automation (RPA)</button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="card card-body">
+                      <div className="row g-4 mb-3">
+                        <div className="col-md-2">
+                          <h6>No. of Batches</h6>
+                          <select className="form-select" id="num-batches" value={numBatches} onChange={handleNumBatchesChange}>
+                           <option value="0" selected>Select</option>
+                           <option value="1">One</option>
+                           <option value="2">Two</option>
+                           <option value="3">Three</option>
+                           <option value="None">No Batch</option>
+                          </select>
+                        </div>
+                      </div>
+                      {numBatches > 0 &&<div>{renderBatchDetails()}</div>}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Search Engine Optimization (SEO)</button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="card card-body">
+                      <div className="row g-4 mb-3">
+                        <div className="col-md-2">
+                          <h6>No. of Batches</h6>
+                          <select className="form-select" id="num-batches" value={numBatches} onChange={handleNumBatchesChange}>
+                           <option value="0" selected>Select</option>
+                           <option value="1">One</option>
+                           <option value="2">Two</option>
+                           <option value="3">Three</option>
+                           <option value="None">No Batch</option>
+                          </select>
+                        </div>
+                      </div>
+                      {numBatches > 0 &&<div>{renderBatchDetails()}</div>}
+                    </div>  
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Python</button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="card card-body">
+                      <div className="row g-4 mb-3">
+                        <div className="col-md-2">
+                          <h6>No. of Batches</h6>
+                          <select className="form-select" id="num-batches" value={numBatches} onChange={handleNumBatchesChange}>
+                           <option value="0" selected>Select</option>
+                           <option value="1">One</option>
+                           <option value="2">Two</option>
+                           <option value="3">Three</option>
+                           <option value="None">No Batch</option>
+                          </select>
+                        </div>
+                      </div>
+                      {numBatches > 0 &&<div>{renderBatchDetails()}</div>}
+                    </div>  
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  REACT</button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="card card-body">
+                      <div className="row g-4 mb-3">
+                        <div className="col-md-2">
+                          <h6>No. of Batches</h6>
+                          <select className="form-select" id="num-batches" value={numBatches} onChange={handleNumBatchesChange}>
+                           <option value="0" selected>Select</option>
+                           <option value="1">One</option>
+                           <option value="2">Two</option>
+                           <option value="3">Three</option>
+                           <option value="None">No Batch</option>
+                          </select>
+                        </div>
+                      </div>
+                      {numBatches > 0 &&<div>{renderBatchDetails()}</div>}
+                    </div>  
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>{numBatches > 0 &&<div>{renderBatchDetails()}</div>}</div>
+            <Link to={'/retail_ou/courses'}><button type = "button" className="btn btn-primary ">Back</button></Link>
+            <Link to={'/retail_ou/submit'}><button type = "button" className="btn btn-primary ">Next</button></Link>
+          </div>
         </div>
-          <Link to={'/retail_ou'}>
-            <button type = "button" className="btn btn-primary ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 20 18">
-                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
-              </svg>
-              Back</button>
-          </Link>
-          <Link to={'/submit'}>
-            <button type = "button" className="btn btn-primary ">Next
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="30" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 11 20">
-                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-              </svg>
-            </button>
-          </Link>
-        </div>
-      </div>
     </div>
   )
 }

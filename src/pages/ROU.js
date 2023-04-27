@@ -22,7 +22,7 @@ const ROU = () => {
       <HeaderROU/>
       <div class='rou-container container font-link'>
         <div class ='rou-box bg-light'>
-        <form class="was-validated">
+        <form class="">
           <div class="col-md mb-3">
             <label class="m-1">Course Type</label>
             <select id="course-type" class="form-select" required aria-label="select example">
@@ -46,9 +46,8 @@ const ROU = () => {
           <div className='col-md mb-3 '>
             <label>Batch Commencement</label>
             <input id="batch-commencement" type="date" class="form-control w-50 mx-auto" min={new Date().toISOString().split('T')[0]} onChange={handleValidation} />
-            <div class="invalid-feedback">Please select a date.</div>
           </div>
-          <Link to={isFormValid ? '/course_details' : '#'}>
+          <Link to={isFormValid ? '/retail_ou/courses' : '#'}>
             <button type="button" className="btn btn-primary" disabled={!isFormValid}>Next</button>
           </Link>
           </form>
